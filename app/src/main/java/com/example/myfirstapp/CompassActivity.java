@@ -4,7 +4,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -17,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.os.Vibrator;
 
-public class DisplayMessageActivity extends AppCompatActivity implements SensorEventListener {
+public class CompassActivity extends AppCompatActivity implements SensorEventListener {
     ImageView compass_img;
     TextView txt_compass;
     int mAzimuth;
@@ -33,7 +32,7 @@ public class DisplayMessageActivity extends AppCompatActivity implements SensorE
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_message);
+        setContentView(R.layout.activity_compass);
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         compass_img = (ImageView) findViewById(R.id.img_compass);
         txt_compass = (TextView) findViewById(R.id.txt_azimuth);
