@@ -1,0 +1,11 @@
+name: Debricked scan
+
+on: [push]
+
+jobs:
+  vulnerabilities-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: debricked/actions/fingerprint-non-docker@v4
